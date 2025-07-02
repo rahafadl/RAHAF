@@ -33,7 +33,6 @@
 - Responsive Design (يدعم الموبايل)
 
 
-📧 للتواصل: Rahafa.b@hotmail.com
 
 ---
 
