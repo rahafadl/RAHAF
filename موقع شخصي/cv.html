@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RAHAF IT | الموقع الشخصي</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Cairo', sans-serif;
+      background-color: #ffffff;
+      color: #333;
+    }
+    header {
+      background: linear-gradient(to left, #1e90a0, #3561a3);
+      color: white;
+      padding: 20px;
+      text-align: center;
+      position: relative;
+    }
+    .logo {
+      max-height: 100px;
+    }
+    .lang-toggle {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background: white;
+      color: #1e90a0;
+      border: none;
+      padding: 8px 15px;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    h2 {
+      color: #1e90a0;
+    }
+    .english { display: none; }
+    .btn-cv {
+      background: #1e90a0;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <button class="lang-toggle" onclick="toggleLanguage()">ENGLISH</button>
+    <img src="logo.png" alt="RAHAF Logo" class="logo">
+    <h1>RAHAF IT</h1>
+  </header>
+
+  <section>
+    <div class="arabic">
+      <h2>من أنا</h2>
+      <p>أخصائية تقنية تحليل نظم بخبرة في تطوير الأنظمة وتحليل البيانات وتصميم الحلول التقنية. أتقن Python وPower BI وSQL وغيرها من الأدوات التقنية.</p>
+
+      <h2>مهاراتي</h2>
+      <ul>
+        <li>البرمجة: Python، Java، HTML، CSS، JavaScript</li>
+        <li>تحليل البيانات: Power BI، SQL، Excel</li>
+        <li>أدوات العمل: WordPress، Office، مخططات الأعمال</li>
+      </ul>
+
+      <h2>مشاريعي</h2>
+      <ul>
+        <li>تحليل بيانات لعيادة بيطرية باستخدام Power BI</li>
+        <li>موقع داخلي لطلب المشروبات (WordPress)</li>
+        <li>تطبيق مشاركة كتب بين الطلاب</li>
+      </ul>
+
+      <h2>السيرة الذاتية</h2>
+      <a href="rahaf.pdf" download class="btn-cv">تحميل PDF</a>
+
+      <h2>تواصل معي</h2>
+      <p>📍 مكة</p>
+      <p>📧 Rahafa.b@hotmail.com</p>
+      <p>📞 0534111259</p>
+    </div>
+
+    <div class="english">
+      <h2>About Me</h2>
+      <p>System analyst and IT specialist with experience in system development, data analysis, and technical solution design. Skilled in Python, Power BI, SQL, and more.</p>
+
+      <h2>My Skills</h2>
+      <ul>
+        <li>Programming: Python, Java, HTML, CSS, JavaScript</li>
+        <li>Data Analysis: Power BI, SQL, Excel</li>
+        <li>Tools: WordPress, Office, Business Modeling</li>
+      </ul>
+
+      <h2>My Projects</h2>
+      <ul>
+        <li>Veterinary clinic data analysis using Power BI</li>
+        <li>Internal beverage ordering system (WordPress)</li>
+        <li>Book-sharing app for students</li>
+      </ul>
+
+      <h2>Curriculum Vitae</h2>
+      <a href="rahaf.pdf" download class="btn-cv">Download PDF</a>
+
+      <h2>Contact Me</h2>
+      <p>📍 Makkah</p>
+      <p>📧 Rahafa.b@hotmail.com</p>
+      <p>📞 0534111259</p>
+    </div>
+  </section>
+
+  <script>
+    function toggleLanguage() {
+      const ar = document.querySelector('.arabic');
+      const en = document.querySelector('.english');
+      const btn = document.querySelector('.lang-toggle');
+
+      if (ar.style.display !== "none") {
+        ar.style.display = "none";
+        en.style.display = "block";
+        btn.textContent = "العربية";
+        document.body.setAttribute("dir", "ltr");
+      } else {
+        ar.style.display = "block";
+        en.style.display = "none";
+        btn.textContent = "ENGLISH";
+        document.body.setAttribute("dir", "rtl");
+      }
+    }
+  </script>
+</body>
+</html>
