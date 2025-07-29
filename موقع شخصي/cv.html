@@ -3,139 +3,180 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RAHAF IT | الموقع الشخصي</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Cairo', sans-serif;
-      background-color: #ffffff;
-      color: #333;
-    }
-    header {
-      background: linear-gradient(to left, #1e90a0, #3561a3);
-      color: white;
-      padding: 20px;
-      text-align: center;
-      position: relative;
-    }
-    .logo {
-      max-height: 100px;
-    }
-    .lang-toggle {
-      position: absolute;
-      top: 20px;
-      left: 20px;
-      background: white;
-      color: #1e90a0;
-      border: none;
-      padding: 8px 15px;
-      font-weight: bold;
-      cursor: pointer;
-      border-radius: 5px;
-    }
-    section {
-      padding: 40px 20px;
-      max-width: 900px;
-      margin: auto;
-    }
-    h2 {
-      color: #1e90a0;
-    }
-    .english { display: none; }
-    .btn-cv {
-      background: #1e90a0;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      font-size: 16px;
-      text-decoration: none;
-    }
-  </style>
+  <title>رهف | الموقع الشخصي</title>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri&family=Cairo:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style-v1.css">
 </head>
 <body>
-
-  <header>
-    <button class="lang-toggle" onclick="toggleLanguage()">ENGLISH</button>
-    <img src="logo.png" alt="RAHAF Logo" class="logo">
-    <h1>RAHAF IT</h1>
+<style>
+    body {
+        margin: 0;
+        font-family: 'Cairo', 'Amiri', sans-serif;
+        background: linear-gradient(-45deg, #3AC0A0, #2B468B, #3AC0A0, #2B468B);
+        background-size: 400% 400%;
+        animation: gradientBG 15s ease infinite;
+        color: white;
+        text-align: center;
+      }
+      
+      @keyframes gradientBG {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+      }
+      
+      .hero-section {
+        padding: 100px 20px;
+      }
+      
+      .logo {
+        max-width: 120px;
+        margin-bottom: 20px;
+      }
+      
+      h1 {
+        font-size: 48px;
+        margin-bottom: 16px;
+      }
+      
+      p {
+        font-size: 19px;
+      }
+      
+      .btn {
+        background-color: white;
+        color: #2B468B;
+        padding: 12px 25px;
+        border-radius: 30px;
+        text-decoration: none;
+        font-weight: bold;
+        display: inline-block;
+        margin-top: 20px;
+        transition: transform 0.3s ease;
+      }
+      
+      .btn:hover {
+        transform: scale(1.1);
+      }
+      
+      main {
+        padding: 40px 20px;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      
+      section {
+        margin-bottom: 60px; /* زيادة المسافة بين الأقسام */
+      }
+      
+      h2 {
+        font-size: 32px;
+        margin-bottom: 20px;
+      }
+      
+      ul {
+        list-style: none;
+        padding: 0;
+      }
+      
+      li {
+        margin: 10px 0;
+        font-size: 18px;
+      }
+      
+      .certificates-grid {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+      
+      .certificate-card {
+        background-color: rgba(255, 255, 255, 0.1);
+        padding: 20px;
+        border-radius: 15px;
+        width: 250px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+      
+      .certificate-card:hover {
+        transform: translateY(-10px);
+      }
+      
+      .cert-logo {
+        max-width: 60px;
+        margin-bottom: 15px;
+      }
+      
+      .certificate-card p {
+        font-size: 18px;
+        font-weight: bold;
+        margin: 0;
+      }
+      
+      .certificate-card span {
+        font-size: 14px;
+        color: #dcdcdc;
+      }
+      
+      footer {
+        background-color: rgba(0, 0, 0, 0.2);
+        padding: 30px 20px;
+        margin-top: 40px;
+      }
+   /* --- لحجم الشاشات --- */
+   @media (max-width: 600px) {
+    h1 { font-size: 36px; }
+    .nav-links a { margin: 0 10px; font-size: 16px; }
+  }      
+</style>
+  <header class="hero-section">
+    <img src="rr.png" alt="شعار رهف" class="logo">
+    <h1>مرحبا، أنا رهف</h1>
+    <p>أخصائية تقنية معلومات</p>
+    <a href="assets/rahaf.pdf" class="btn" download>تحميل السيرة الذاتية</a>
   </header>
 
-  <section>
-    <div class="arabic">
-      <h2>من أنا</h2>
-      <p>أخصائية تقنية تحليل نظم بخبرة في تطوير الأنظمة وتحليل البيانات وتصميم الحلول التقنية. أتقن Python وPower BI وSQL وغيرها من الأدوات التقنية.</p>
-
+  <main>
+    <section>
       <h2>مهاراتي</h2>
       <ul>
         <li>البرمجة: Python، Java، HTML، CSS، JavaScript</li>
         <li>تحليل البيانات: Power BI، SQL، Excel</li>
-        <li>أدوات العمل: WordPress، Office، مخططات الأعمال</li>
+        <li>أدوات العمل: WordPress، Office</li>
       </ul>
+    </section>
 
+    <section>
       <h2>مشاريعي</h2>
       <ul>
         <li>تحليل بيانات لعيادة بيطرية باستخدام Power BI</li>
-        <li>موقع داخلي لطلب المشروبات (WordPress)</li>
-        <li>تطبيق مشاركة كتب بين الطلاب</li>
+        <li>موقع داخلي لطلب المشروبات</li>
       </ul>
+    </section>
 
-      <h2>السيرة الذاتية</h2>
-      <a href="rahaf.pdf" download class="btn-cv">تحميل PDF</a>
+    <section>
+        <h2>شهاداتي</h2>
+        <div class="certificates-grid">
+          <div class="certificate-card">
+            <img src="google_logo.svg.png" alt="شعار جوجل" class="cert-logo">
+            <p>تحليل البيانات من جوجل</p>
+            <span>(Coursera, 2023 )</span>
+          </div>
+          <div class="certificate-card">
+            <img src="Microsoft_logo.svg.png" alt="شعار مايكروسوفت" class="cert-logo">
+            <p>أساسيات Azure</p>
+            <span>(Microsoft Learn, 2024)</span>
+          </div>
+        </div>
+      </section>
+  </main>
 
-      <h2>تواصل معي</h2>
-      <p>📍 مكة</p>
-      <p>📧 Rahafa.b@hotmail.com</p>
-      <p>📞 0534111259</p>
-    </div>
+  <footer>
+    <h2>تواصل معي</h2>
+    <p class="contact">📧 example@hotmail.com | 📞 05555555555 | 📍 مكة</p>
+  </footer>
 
-    <div class="english">
-      <h2>About Me</h2>
-      <p>System analyst and IT specialist with experience in system development, data analysis, and technical solution design. Skilled in Python, Power BI, SQL, and more.</p>
-
-      <h2>My Skills</h2>
-      <ul>
-        <li>Programming: Python, Java, HTML, CSS, JavaScript</li>
-        <li>Data Analysis: Power BI, SQL, Excel</li>
-        <li>Tools: WordPress, Office, Business Modeling</li>
-      </ul>
-
-      <h2>My Projects</h2>
-      <ul>
-        <li>Veterinary clinic data analysis using Power BI</li>
-        <li>Internal beverage ordering system (WordPress)</li>
-        <li>Book-sharing app for students</li>
-      </ul>
-
-      <h2>Curriculum Vitae</h2>
-      <a href="rahaf.pdf" download class="btn-cv">Download PDF</a>
-
-      <h2>Contact Me</h2>
-      <p>📍 Makkah</p>
-      <p>📧 Rahafa.b@hotmail.com</p>
-      <p>📞 0534111259</p>
-    </div>
-  </section>
-
-  <script>
-    function toggleLanguage() {
-      const ar = document.querySelector('.arabic');
-      const en = document.querySelector('.english');
-      const btn = document.querySelector('.lang-toggle');
-
-      if (ar.style.display !== "none") {
-        ar.style.display = "none";
-        en.style.display = "block";
-        btn.textContent = "العربية";
-        document.body.setAttribute("dir", "ltr");
-      } else {
-        ar.style.display = "block";
-        en.style.display = "none";
-        btn.textContent = "ENGLISH";
-        document.body.setAttribute("dir", "rtl");
-      }
-    }
-  </script>
 </body>
 </html>
